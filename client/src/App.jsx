@@ -82,27 +82,27 @@ function App() {
                 <Code size={32} />
               </motion.div>
               
-              <div className="flex flex-col items-center gap-4">
-                <div className="h-1 w-48 overflow-hidden rounded-full bg-border-subtle">
+              <div className="flex flex-col gap-3">
+                <div className="flex w-48 items-end justify-between px-1">
+                  <motion.span 
+                    initial={{ opacity: 0 }} 
+                    animate={{ opacity: 1 }} 
+                    className="font-mono text-[10px] uppercase tracking-[0.2em] text-text-tertiary"
+                  >
+                    CAHYO.DEV
+                  </motion.span>
+                  <span className="font-mono text-[10px] font-medium text-text-secondary">
+                    {progress}%
+                  </span>
+                </div>
+                
+                <div className="h-[2px] w-48 overflow-hidden rounded-full bg-border-subtle">
                   <motion.div 
                     className="h-full bg-gradient-to-r from-accent-blue to-accent-purple"
                     initial={{ width: 0 }}
                     animate={{ width: `${progress}%` }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
                   />
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <motion.span 
-                    initial={{ opacity: 0 }} 
-                    animate={{ opacity: 1 }} 
-                    className="font-mono text-[12px] uppercase tracking-widest text-text-tertiary"
-                  >
-                    INITIALIZING CAHYO.DEV
-                  </motion.span>
-                  <span className="font-mono text-[12px] font-bold text-accent-blue">
-                    {progress}%
-                  </span>
                 </div>
               </div>
             </div>
