@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cahyodev.my.id/sitemap.xml

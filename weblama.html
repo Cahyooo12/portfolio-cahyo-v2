@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahyo | Social Activist & Creative</title>
+    <meta name="description"
+        content="Portfolio of Cahyo — Social Activist, Content Creator, Visual Designer, and Community Builder from Yogyakarta.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" aria-label="Main Navigation">
+        <div class="nav__inner">
+            <a href="https://cahyodev.my.id" target="_blank" rel="noopener noreferrer" class="nav__logo">
+                <span class="nav__logo-dot"></span>
+                Cahyo Dev
+            </a>
+            <div class="nav__links">
+                <a href="#about" class="nav__link">Tentang</a>
+                <a href="#experience" class="nav__link">Pengalaman</a>
+                <a href="#projects" class="nav__link">Proyek</a>
+                <a href="#skills" class="nav__link">Keahlian</a>
+                <a href="#contact" class="nav__link nav__link--cta">Kolaborasi</a>
+            </div>
+            <button class="nav__burger" aria-label="Toggle menu"
+                onclick="document.querySelector('.nav__links').classList.toggle('nav__links--open')">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero__bg-text" aria-hidden="true">CAHYO</div>
+            <div class="hero__content">
+                <div class="hero__badge-row">
+                    <span class="badge badge--green">
+                        <span class="badge__dot"></span>
+                        Open for Collaboration
+                    </span>
+                    <span class="badge badge--outline">Yogyakarta, ID</span>
+                </div>
+                <h1 class="hero__title">
+                    Membangun<br>
+                    <em>Dampak Nyata</em><br>
+                    Lewat Kreativitas.
+                </h1>
+                <p class="hero__desc">
+                    Social activist, content creator, dan visual designer yang percaya bahwa
+                    perubahan besar dimulai dari tindakan kecil — dan dari komunitas yang kuat.
+                </p>
+                <div class="hero__actions">
+                    <a href="#projects" class="btn btn--primary">Lihat Proyek</a>
+                    <a href="#contact" class="btn btn--ghost">Ajak Kolaborasi →</a>
+                </div>
+                <div class="hero__stats">
+                    <div class="hero__stat">
+                        <span class="hero__stat-num">3+</span>
+                        <span class="hero__stat-label">Organisasi Aktif</span>
+                    </div>
+                    <div class="hero__stat-div"></div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-num">2×</span>
+                        <span class="hero__stat-label">Juara Kompetisi</span>
+                    </div>
+                    <div class="hero__stat-div"></div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-num">20+</span>
+                        <span class="hero__stat-label">Kegiatan Sosial</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__img-wrap">
+                <div class="hero__img-frame">
+                    <img src="assets/images/Profil.jpg" alt="Foto Cahyo" class="hero__img">
+                    <div class="hero__img-card">
+                        <span class="hero__img-card-label">Mahasiswa Aktif</span>
+                        <span class="hero__img-card-value">AMIKOM Yogyakarta</span>
+                    </div>
+                </div>
+                <div class="hero__orbit" aria-hidden="true">
+                    <div class="hero__orbit-ring"></div>
+                    <div class="hero__orbit-dot hero__orbit-dot--1">📸</div>
+                    <div class="hero__orbit-dot hero__orbit-dot--2">🌱</div>
+                    <div class="hero__orbit-dot hero__orbit-dot--3">🎬</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>Social Activist</span><span class="marquee__sep">✦</span>
+                <span>Content Creator</span><span class="marquee__sep">✦</span>
+                <span>Visual Designer</span><span class="marquee__sep">✦</span>
+                <span>Community Builder</span><span class="marquee__sep">✦</span>
+                <span>Photographer</span><span class="marquee__sep">✦</span>
+                <span>Videographer</span><span class="marquee__sep">✦</span>
+                <span>Event Organizer</span><span class="marquee__sep">✦</span>
+                <span>Social Activist</span><span class="marquee__sep">✦</span>
+                <span>Content Creator</span><span class="marquee__sep">✦</span>
+                <span>Visual Designer</span><span class="marquee__sep">✦</span>
+                <span>Community Builder</span><span class="marquee__sep">✦</span>
+                <span>Photographer</span><span class="marquee__sep">✦</span>
+                <span>Videographer</span><span class="marquee__sep">✦</span>
+                <span>Event Organizer</span><span class="marquee__sep">✦</span>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__left">
+                        <p class="section-eyebrow">Tentang Saya</p>
+                        <h2 class="section-title">Driven by purpose,<br>fueled by community.</h2>
+                        <p class="about__body">
+                            Halo! Saya <strong>Cahyo</strong> — mahasiswa S1 Sistem Informasi di
+                            <strong>Universitas AMIKOM Yogyakarta</strong> yang aktif bergerak di dunia
+                            sosial dan kreatif. NIM saya <strong>25.12.3680</strong>.
+                        </p>
+                        <p class="about__body">
+                            Saya percaya perubahan besar dimulai dari tindakan kecil. Lewat berbagai
+                            organisasi dan proyek, saya berupaya memberdayakan pemuda, menjaga lingkungan,
+                            dan membangun komunitas yang inklusif dan berkelanjutan.
+                        </p>
+                        <div class="about__contacts">
+                            <a href="mailto:Cahsirat05@gmail.com" class="contact-chip">
+                                <span>✉</span> Cahsirat05@gmail.com
+                            </a>
+                            <a href="https://wa.me/62859166338595" class="contact-chip">
+                                <span>📱</span> +62 859-1663-38595
+                            </a>
+                            <a href="https://www.linkedin.com/in/Cahyo" class="contact-chip" target="_blank">
+                                <span>in</span> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about__right">
+                        <div class="about__card about__card--edu">
+                            <p class="about__card-label">🎓 Pendidikan</p>
+                            <div class="edu-item">
+                                <div class="edu-item__name">Universitas AMIKOM Yogyakarta</div>
+                                <div class="edu-item__detail">S1 Sistem Informasi · Sept 2025 – Sekarang</div>
+                            </div>
+                            <div class="edu-item">
+                                <div class="edu-item__name">SMAN 1 Bambanglipuro</div>
+                                <div class="edu-item__detail">Juli 2022 – Juni 2025 · GPA 86.1</div>
+                            </div>
+                        </div>
+                        <div class="about__card about__card--award">
+                            <p class="about__card-label">🏆 Prestasi</p>
+                            <div class="award-item">
+                                <span class="award-item__rank">🥉</span>
+                                <span>Juara 3 Lomba Video Edukasi SMA — Balai Teknologi Pendidikan Yogyakarta</span>
+                            </div>
+                            <div class="award-item">
+                                <span class="award-item__rank">🥉</span>
+                                <span>Juara 3 Kompetisi PKM Pengabdian Masyarakat — PIMAPOSMA AMIKOM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="section experience">
+            <div class="container">
+                <p class="section-eyebrow">Pengalaman Organisasi</p>
+                <h2 class="section-title">Aktif bergerak,<br>nyata berdampak.</h2>
+                <div class="exp-list">
+
+                    <article class="exp-card exp-card--accent">
+                        <div class="exp-card__icon">💻</div>
+                        <div class="exp-card__body">
+                            <div class="exp-card__meta">
+                                <h3 class="exp-card__title">Tandang Studio</h3>
+                                <span class="exp-card__period">Des 2025 – Sekarang · 5 bln</span>
+                            </div>
+                            <p class="exp-card__role">Web Developer · Search Engine Optimization · Paruh Waktu</p>
+                            <ul class="exp-card__points">
+                                <li>Mengembangkan dan mengoptimalkan website untuk meningkatkan visibilitas di mesin
+                                    pencari.</li>
+                                <li>Menerapkan strategi SEO on-page dan teknikal untuk meningkatkan peringkat pencarian
+                                    organik.</li>
+                            </ul>
+                            <div class="exp-card__tags">
+                                <span class="exp-tag">Web Development</span>
+                                <span class="exp-tag">SEO</span>
+                                <span class="exp-tag">Yogyakarta</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-card__icon">🥗</div>
+                        <div class="exp-card__body">
+                            <div class="exp-card__meta">
+                                <h3 class="exp-card__title">Sayur Sleman</h3>
+                                <span class="exp-card__period">Feb 2026 – Mar 2026 · 2 bln</span>
+                            </div>
+                            <p class="exp-card__role">Social Media Officer · Magang</p>
+                            <ul class="exp-card__points">
+                                <li>Mengelola dan mengoptimalkan konten media sosial harian untuk meningkatkan brand
+                                    awareness Sayur Sleman.</li>
+                                <li>Menyusun laporan performa konten bulanan dan memberikan rekomendasi strategis.</li>
+                            </ul>
+                            <div class="exp-card__award">
+                                <span class="exp-card__award-icon">🏅</span>
+                                <span>Internship Award</span>
+                            </div>
+                            <div class="exp-card__tags">
+                                <span class="exp-tag">Strategi Konten</span>
+                                <span class="exp-tag">Pemasaran Media Sosial</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-card__icon">🌿</div>
+                        <div class="exp-card__body">
+                            <div class="exp-card__meta">
+                                <h3 class="exp-card__title">Desamind Indonesia Foundation</h3>
+                                <span class="exp-card__period">Mar 2024 – Sekarang · 2 thn 2 bln</span>
+                            </div>
+                            <p class="exp-card__role">Social Media Branding of the Yogyakarta Chapter</p>
+                            <ul class="exp-card__points">
+                                <li>Responsible for social media management of Desamind Yogyakarta, including design and
+                                    content creation.</li>
+                                <li>Terlibat dalam program pemberdayaan komunitas dan pendidikan di area Yogyakarta.
+                                </li>
+                            </ul>
+                            <div class="exp-card__tags">
+                                <span class="exp-tag">Graphic Design</span>
+                                <span class="exp-tag">Photography</span>
+                                <span class="exp-tag">+4 Keahlian</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-card__icon">🌍</div>
+                        <div class="exp-card__body">
+                            <div class="exp-card__meta">
+                                <h3 class="exp-card__title">RCE Yogyakarta</h3>
+                                <span class="exp-card__period">Jul 2024 – Sekarang · 1 thn 10 bln</span>
+                            </div>
+                            <p class="exp-card__role">Member · SDGs Advocate</p>
+                            <ul class="exp-card__points">
+                                <li>Berpartisipasi dalam kegiatan mendukung Sustainable Development Goals (SDGs).</li>
+                                <li>Mengelola media sosial RCE Yogyakarta — desain dan pembuatan konten kreatif.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-card__icon">🏫</div>
+                        <div class="exp-card__body">
+                            <div class="exp-card__meta">
+                                <h3 class="exp-card__title">OSIS SMAN 1 Bambanglipuro</h3>
+                                <span class="exp-card__period">Okt 2022 – Okt 2024</span>
+                            </div>
+                            <p class="exp-card__role">Student Council Member</p>
+                            <ul class="exp-card__points">
+                                <li>Merencanakan dan mengimplementasikan program kerja OSIS selama 2 periode.</li>
+                                <li>Memimpin event <em>"Bamsayota Berbagi"</em> pada Ramadan 1446 H.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Volunteer strip -->
+                <div class="volunteer-strip">
+                    <p class="volunteer-strip__label">Volunteer Experience</p>
+                    <div class="volunteer-grid">
+                        <div class="volunteer-item">
+                            <span class="volunteer-item__icon">🏖️</span>
+                            <span>Parangtritis Beach Cleanup — Pandara Foundation</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <span class="volunteer-item__icon">🏕️</span>
+                            <span>Desamind Leadership Camp — Desamind ID</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <span class="volunteer-item__icon">🌴</span>
+                            <span>Pelangi Beach Sea Pandan Planting — 4K Yogyakarta</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <span class="volunteer-item__icon">🎓</span>
+                            <span>RCE Youth Workshop di GIK UGM — Tim Logistik & Dokumentasi</span>
+                        </div>
+                        <div class="volunteer-item">
+                            <span class="volunteer-item__icon">🌱</span>
+                            <span>Yogyakarta Vegan Festival — Volunteer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <p class="section-eyebrow">Portofolio Proyek</p>
+                <h2 class="section-title">Selected Works</h2>
+                <p class="projects__sub">Karya nyata dari kolaborasi bermakna — desain, acara, dan dampak sosial.</p>
+                <div class="projects-grid">
+
+                    <article class="proj-card proj-card--wide">
+                        <div class="proj-card__img-wrap">
+                            <img src="assets/images/buf2026.png" alt="Bamsayota University Fair 2026"
+                                class="proj-card__img">
+                            <div class="proj-card__overlay">
+                                <span class="proj-card__cta">Lihat Detail →</span>
+                            </div>
+                        </div>
+                        <div class="proj-card__info">
+                            <span class="proj-card__cat">Event · Education</span>
+                            <h3 class="proj-card__title">BUF 2026</h3>
+                            <p class="proj-card__desc">Bamsayota University Fair 2026 — event tahunan SMAN 1
+                                Bambanglipuro untuk menjembatani siswa SMA dengan perguruan tinggi impian. Expo,
+                                konsultasi jurusan, info beasiswa, dan panggung hiburan.</p>
+                        </div>
+                    </article>
+
+                    <article class="proj-card">
+                        <div class="proj-card__img-wrap">
+                            <img src="assets/images/bungatelang.png" alt="Desa Wisata Bunga Telang"
+                                class="proj-card__img">
+                            <div class="proj-card__overlay">
+                                <span class="proj-card__cta">Lihat Detail →</span>
+                            </div>
+                        </div>
+                        <div class="proj-card__info">
+                            <span class="proj-card__cat">Nature · Community</span>
+                            <h3 class="proj-card__title">Bunga Telang</h3>
+                            <p class="proj-card__desc">Desa Wisata Dusun Sirat — edukasi budidaya telang dan produk
+                                herbal langsung dari petani lokal.</p>
+                        </div>
+                    </article>
+
+                    <article class="proj-card">
+                        <div class="proj-card__img-wrap">
+                            <img src="assets/images/a5studio.png" alt="A5 Studio Creative Agency"
+                                class="proj-card__img">
+                            <div class="proj-card__overlay">
+                                <span class="proj-card__cta">Lihat Detail →</span>
+                            </div>
+                        </div>
+                        <div class="proj-card__info">
+                            <span class="proj-card__cat">Creative Agency · Design</span>
+                            <h3 class="proj-card__title">A5 Studio</h3>
+                            <p class="proj-card__desc">Partner kreatif digital — mentransformasi visi menjadi realitas
+                                prestisius lewat desain strategis.</p>
+                        </div>
+                    </article>
+
+                    <article class="proj-card proj-card--dark">
+                        <div class="proj-card__img-wrap">
+                            <img src="assets/images/rce.png" alt="RCE Yogyakarta" class="proj-card__img">
+                            <div class="proj-card__overlay">
+                                <span class="proj-card__cta">Lihat Detail →</span>
+                            </div>
+                        </div>
+                        <div class="proj-card__info">
+                            <span class="proj-card__cat">Sustainability · SDGs</span>
+                            <h3 class="proj-card__title">RCE Yogyakarta</h3>
+                            <p class="proj-card__desc">Regional Centre of Expertise — mendorong transformasi masyarakat
+                                lewat inovasi pendidikan dan aksi lingkungan.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section skills">
+            <div class="container">
+                <p class="section-eyebrow">Keahlian</p>
+                <h2 class="section-title">Apa yang saya<br>bawa ke meja.</h2>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h4 class="skill-group__title">Hard Skills</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">📷 Photography</span>
+                            <span class="skill-tag">🎬 Videography</span>
+                            <span class="skill-tag">🎨 Canva Design</span>
+                            <span class="skill-tag">✂️ CapCut Editing</span>
+                            <span class="skill-tag">📱 Social Media Management</span>
+                            <span class="skill-tag">📄 Microsoft Word</span>
+                            <span class="skill-tag">🌐 Public Relations</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4 class="skill-group__title">Soft Skills</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag skill-tag--soft">💡 Creativity</span>
+                            <span class="skill-tag skill-tag--soft">🤝 Teamwork & Collaboration</span>
+                            <span class="skill-tag skill-tag--soft">⏰ Time Management</span>
+                            <span class="skill-tag skill-tag--soft">🎯 Leadership</span>
+                            <span class="skill-tag skill-tag--soft">🗣️ Communication</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT / FORM -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="contact__wrap">
+                    <div class="contact__left">
+                        <p class="section-eyebrow">Kolaborasi</p>
+                        <h2 class="contact__title">Punya ide besar?<br>Mari wujudkan<br>bersama.</h2>
+                        <p class="contact__body">
+                            Terbuka untuk kolaborasi di bidang desain konten, social impact project,
+                            event organizer, fotografi & videografi, atau web development.
+                        </p>
+                        <div class="contact__info">
+                            <a href="mailto:Cahsirat05@gmail.com" class="contact__info-item">
+                                <span class="contact__info-icon">✉</span>
+                                <span>Cahsirat05@gmail.com</span>
+                            </a>
+                            <a href="https://wa.me/62859166338595" class="contact__info-item">
+                                <span class="contact__info-icon">📱</span>
+                                <span>+62 859-1663-38595</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/Cahyo" target="_blank" class="contact__info-item">
+                                <span class="contact__info-icon">in</span>
+                                <span>linkedin.com/in/Cahyo</span>
+                            </a>
+                            <a href="https://cahyodev.my.id" target="_blank" rel="noopener noreferrer"
+                                class="contact__info-item contact__info-item--website">
+                                <span class="contact__info-icon">🌐</span>
+                                <span>cahyodev.my.id</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact__right">
+                        <form id="collaboration-form" class="form" action="#" method="post">
+                            <h3 class="form__title">Formulir Kolaborasi</h3>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="nama">Nama Lengkap</label>
+                                    <input class="form-input" type="text" id="nama" name="nama" placeholder="Nama Anda"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-input" type="email" id="email" name="email"
+                                        placeholder="email@domain.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="pesan">Pesan / Deskripsi Proyek</label>
+                                <textarea class="form-input form-input--textarea" id="pesan" name="pesan" rows="4"
+                                    placeholder="Ceritakan ide atau kebutuhan Anda..."></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="bidang">Bidang Kolaborasi</label>
+                                    <select class="form-input form-input--select" id="bidang" name="bidang">
+                                        <option value="">-- Pilih Bidang --</option>
+                                        <option value="design">Desain Konten / Visual</option>
+                                        <option value="social">Social Impact Project</option>
+                                        <option value="event">Event Organizer</option>
+                                        <option value="photo">Fotografi & Videografi</option>
+                                        <option value="web">Web Development</option>
+                                        <option value="sosialmedia">Social Media Management</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="jadwal">Tanggal Diskusi</label>
+                                    <input class="form-input" type="datetime-local" id="jadwal" name="jadwal">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" id="gender-label">Jenis Kelamin</label>
+                                    <div class="radio-group" role="radiogroup" aria-labelledby="gender-label">
+                                        <label class="radio-opt">
+                                            <input type="radio" name="gender" value="laki-laki">
+                                            <span class="radio-box"></span>
+                                            Laki-laki
+                                        </label>
+                                        <label class="radio-opt">
+                                            <input type="radio" name="gender" value="perempuan">
+                                            <span class="radio-box"></span>
+                                            Perempuan
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" id="platform-label">Platform</label>
+                                    <div class="check-group" role="group" aria-labelledby="platform-label">
+                                        <label class="check-opt">
+                                            <input type="checkbox" name="platform[]" value="instagram">
+                                            <span class="check-box"></span>Instagram
+                                        </label>
+                                        <label class="check-opt">
+                                            <input type="checkbox" name="platform[]" value="web">
+                                            <span class="check-box"></span>Web
+                                        </label>
+                                        <label class="check-opt">
+                                            <input type="checkbox" name="platform[]" value="tiktok">
+                                            <span class="check-box"></span>TikTok
+                                        </label>
+                                        <label class="check-opt">
+                                            <input type="checkbox" name="platform[]" value="youtube">
+                                            <span class="check-box"></span>YouTube
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="cv">Upload Brief / Portofolio (PDF)</label>
+                                <input class="form-input form-input--file" type="file" id="cv" name="cv"
+                                    accept=".pdf,.doc,.docx">
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn--primary btn--full">Kirim Pesan 🚀</button>
+                                <button type="reset" class="btn btn--ghost">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOX MODEL DEMO -->
+        <section class="boxmodel-demo" aria-label="Box Model Demonstration">
+            <div class="container">
+                <div class="boxmodel-card">
+                    <span class="boxmodel-card__tag">Box Model · Tugas Praktikum</span>
+                    <p class="boxmodel-card__text">
+                        Elemen ini mendemonstrasikan penggunaan <strong>margin, border (dashed), padding, dan
+                            content</strong>
+                        sesuai spesifikasi tugas PPW Praktikum 5.
+                        <br><strong>Cahyo · Yogyakarta · NIM 25.12.3680</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <a href="https://cahyodev.my.id" target="_blank" rel="noopener noreferrer"
+                        class="footer__logo">Cahyo Dev</a>
+                    <p class="footer__tagline">Social Activist · Content Creator · Visual Designer</p>
+                    <a href="https://cahyodev.my.id" target="_blank" rel="noopener noreferrer"
+                        class="footer__site-link">🌐 cahyodev.my.id</a>
+                </div>
+                <div class="footer__links">
+                    <a href="#about">Tentang</a>
+                    <a href="#experience">Pengalaman</a>
+                    <a href="#projects">Proyek</a>
+                    <a href="#contact">Kontak</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Cahyo · NIM 25.12.3680 · Universitas AMIKOM Yogyakarta · <a href="https://cahyodev.my.id"
+                        target="_blank" rel="noopener noreferrer">cahyodev.my.id</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll nav active state
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav__link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 100) current = s.id;
+            });
+            navLinks.forEach(a => {
+                a.classList.toggle('nav__link--active', a.getAttribute('href') === '#' + current);
+            });
+        });
+
+        // Form submit
+        document.getElementById('collaboration-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('[type="submit"]');
+            btn.textContent = '✅ Terkirim! Saya akan segera menghubungi Anda.';
+            btn.disabled = true;
+            btn.style.background = '#10b981';
+        });
+    </script>
+
+</body>
+
+</html>
