@@ -98,9 +98,9 @@ function App() {
                     animate={{ opacity: 1 }} 
                     className="font-mono text-[12px] uppercase tracking-widest text-text-tertiary"
                   >
-                    Compiling Assets
+                    INITIALIZING CAHYO.DEV
                   </motion.span>
-                  <span className="font-mono text-[12px] font-bold text-text-primary">
+                  <span className="font-mono text-[12px] font-bold text-accent-blue">
                     {progress}%
                   </span>
                 </div>
