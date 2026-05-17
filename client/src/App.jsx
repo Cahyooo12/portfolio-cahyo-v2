@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Code } from 'lucide-react';
+import { motion, AnimatePresence, animate } from 'framer-motion';
 
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
@@ -15,6 +14,17 @@ import { projects } from './data/projects';
 function App() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
+  const [displayProgress, setDisplayProgress] = useState(0);
+
+  // Smooth number interpolation
+  useEffect(() => {
+    const controls = animate(displayProgress, progress, {
+      duration: 0.8,
+      ease: "easeOut",
+      onUpdate: (value) => setDisplayProgress(Math.round(value))
+    });
+    return controls.stop;
+  }, [progress]);
 
   useEffect(() => {
     // Prevent scrolling while loading
@@ -50,15 +60,15 @@ function App() {
       });
     });
 
-    // We also add a minimum delay of 1.5s so the loader isn't instantly flashing
-    const minDelay = new Promise(resolve => setTimeout(resolve, 1500));
+    // Minimum delay to let the user see the epic loading screen
+    const minDelay = new Promise(resolve => setTimeout(resolve, 2000));
 
     Promise.all([...promises, minDelay]).then(() => {
       // Add a tiny delay at 100% so it feels complete
       setTimeout(() => {
         setLoading(false);
         document.body.style.overflow = 'auto';
-      }, 400);
+      }, 500);
     });
 
   }, []);
@@ -68,42 +78,44 @@ function App() {
       <AnimatePresence>
         {loading && (
           <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0, y: -20, filter: 'blur(10px)' }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-bg-primary"
+            key="preloader"
+            initial={{ y: 0 }}
+            exit={{ y: '-100vh' }}
+            transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
+            className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-[#0a0a0b] text-text-primary"
           >
-            <div className="flex flex-col items-center gap-8">
-              <motion.div 
-                animate={{ scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="flex h-16 w-16 items-center justify-center rounded-full bg-accent-blue/10 text-accent-blue"
-              >
-                <Code size={32} />
-              </motion.div>
-              
-              <div className="flex flex-col gap-3">
-                <div className="flex w-48 items-end justify-between px-1">
-                  <motion.span 
-                    initial={{ opacity: 0 }} 
-                    animate={{ opacity: 1 }} 
-                    className="font-mono text-[10px] uppercase tracking-[0.2em] text-text-tertiary"
-                  >
-                    CAHYO.DEV
-                  </motion.span>
-                  <span className="font-mono text-[10px] font-medium text-text-secondary">
-                    {progress}%
-                  </span>
-                </div>
-                
-                <div className="h-[2px] w-48 overflow-hidden rounded-full bg-border-subtle">
-                  <motion.div 
-                    className="h-full bg-gradient-to-r from-accent-blue to-accent-purple"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${progress}%` }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                  />
-                </div>
+            {/* Top Brand Logo */}
+            <div className="absolute top-8 left-8 md:top-12 md:left-12">
+              <span className="font-display text-[16px] font-bold tracking-tight">Cahyo.</span>
+            </div>
+            
+            {/* Massive Counter */}
+            <div className="flex items-baseline">
+              <h1 className="font-display text-[25vw] md:text-[20vw] font-black leading-none tracking-tighter">
+                {displayProgress}
+              </h1>
+              <span className="font-display text-[8vw] md:text-[5vw] font-bold text-accent-blue ml-2">
+                %
+              </span>
+            </div>
+
+            {/* Bottom Progress Line */}
+            <div className="absolute bottom-12 md:bottom-16 w-full px-8 md:px-24">
+              <div className="flex w-full items-end justify-between mb-4">
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-text-tertiary">
+                  LOADING EXPERIENCE
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-text-tertiary">
+                  {displayProgress} / 100
+                </span>
+              </div>
+              <div className="h-[2px] w-full overflow-hidden bg-border-subtle">
+                <motion.div 
+                  className="h-full bg-white"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${displayProgress}%` }}
+                  transition={{ duration: 0.1 }}
+                />
               </div>
             </div>
           </motion.div>
