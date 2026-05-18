@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FileText } from 'lucide-react';
-import { FaEnvelope, FaGithub, FaLinkedin, FaGlobe } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaGlobe, FaInstagram } from 'react-icons/fa';
 import ScrollReveal from '../components/ScrollReveal';
 
 export default function Contact() {
@@ -23,7 +23,7 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
-    
+
     // Simulating API call
     setTimeout(() => {
       setStatus('success');
@@ -36,9 +36,9 @@ export default function Contact() {
     <section id="contact" className="relative bg-bg-primary px-6 py-[100px] text-center overflow-hidden">
       {/* Ambient Glow */}
       <div className="ambient-glow bg-accent-blue w-[500px] h-[500px] top-[10%] left-1/2 -translate-x-1/2 opacity-[0.05]"></div>
-      
+
       <div className="relative z-10 mx-auto max-w-[1262px]">
-        
+
         <ScrollReveal>
           <p className="mb-5 text-[12px] font-semibold uppercase tracking-[0.1em] text-accent-blue-light">
             Let's work together
@@ -49,9 +49,9 @@ export default function Contact() {
           <p className="mx-auto mb-10 max-w-[440px] text-[17px] leading-[1.65] text-text-tertiary">
             Web app, mobile app, or both — I'm open to freelance, full-time, and remote collaborations.
           </p>
-          
-          <a 
-            href="mailto:Cahsirat05@gmail.com" 
+
+          <a
+            href="mailto:Cahsirat05@gmail.com"
             className="inline-flex h-11 items-center justify-center rounded-full bg-accent-blue px-6 text-[15px] font-medium text-white transition-colors hover:bg-accent-blue-hover"
           >
             Cahsirat05@gmail.com
@@ -72,8 +72,8 @@ export default function Contact() {
               <label className="text-[13px] text-text-secondary">Message</label>
               <textarea required rows="4" className="resize-y rounded-md border border-border-subtle bg-bg-secondary p-3 text-[15px] text-text-primary outline-none focus:border-accent-blue focus:bg-bg-elevated transition-colors backdrop-blur-md"></textarea>
             </div>
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               disabled={status === 'loading' || status === 'success'}
               className="flex w-full h-11 items-center justify-center rounded-full bg-accent-blue text-[15px] font-medium text-white transition-colors hover:bg-accent-blue-hover disabled:bg-bg-elevated disabled:text-text-muted"
             >
@@ -87,11 +87,14 @@ export default function Contact() {
             <a href="mailto:Cahsirat05@gmail.com" className="flex items-center gap-1.5 text-[14px] text-text-tertiary transition-colors hover:text-accent-blue-light">
               <FaEnvelope size={16} /> Email
             </a>
-            <a href="https://github.com/Cahyooo12" className="flex items-center gap-1.5 text-[14px] text-text-tertiary transition-colors hover:text-accent-blue-light">
+            <a href="https://github.com/Cahyooo12" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-[14px] text-text-tertiary transition-colors hover:text-accent-blue-light">
               <FaGithub size={16} /> GitHub
             </a>
-            <a href="https://www.linkedin.com/in/Cahyo" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-[14px] text-text-tertiary transition-colors hover:text-accent-blue-light">
+            <a href="https://www.linkedin.com/in/cahyo-/" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-[14px] text-text-tertiary transition-colors hover:text-accent-blue-light">
               <FaLinkedin size={16} /> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/cahyo_sirat05/" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-[14px] text-text-tertiary transition-colors hover:text-accent-blue-light">
+              <FaInstagram size={16} /> Instagram
             </a>
             <a href="https://cahyodev.my.id" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-[14px] text-text-tertiary transition-colors hover:text-accent-blue-light">
               <FaGlobe size={16} /> Website
@@ -100,19 +103,19 @@ export default function Contact() {
         </ScrollReveal>
 
       </div>
-      
+
       <footer className="relative mt-32 overflow-hidden bg-bg-secondary pt-16">
         {/* Top Border Glow Effect */}
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-accent-blue/50 to-transparent"></div>
-        
+
         <div className="mx-auto max-w-[1262px] px-6">
           <div className="flex flex-col items-center justify-between gap-8 border-b border-border-subtle pb-12 md:flex-row md:items-end">
             <div className="text-center md:text-left">
               <h3 className="text-[24px] font-bold tracking-tight text-text-primary mb-2">Ready to create something amazing?</h3>
               <p className="text-[15px] text-text-tertiary">Let's build the future of the web together.</p>
             </div>
-            <a 
-              href="#" 
+            <a
+              href="#"
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -138,13 +141,13 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        
+
         {/* HUGE CAHYO TEXT WITH INTERACTIVE GLOW */}
         <div className="group flex w-full select-none justify-center overflow-hidden leading-none relative cursor-default pt-8">
-          <h1 
-            style={{ 
-              WebkitMaskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)', 
-              maskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)' 
+          <h1
+            style={{
+              WebkitMaskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)',
+              maskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)'
             }}
             className="font-display text-[22vw] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-text-secondary to-text-secondary/0 translate-y-[20%] opacity-50 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:from-text-primary group-hover:to-text-tertiary group-hover:translate-y-[15%] group-hover:scale-[1.02]"
           >

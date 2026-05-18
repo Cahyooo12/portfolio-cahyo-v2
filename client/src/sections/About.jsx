@@ -16,10 +16,10 @@ export default function About() {
           </h2>
           <div className="text-[16px] leading-[1.75] text-text-tertiary">
             <p className="mb-4">
-              I'm a Full Stack & Apps Developer based in Yogyakarta, Indonesia. Mahasiswa S1 Sistem Informasi di Universitas AMIKOM Yogyakarta. I specialize in modern web applications and cross-platform mobile experiences — fast, reliable, and built with care.
+              I'm a Full Stack & Apps Developer based in Yogyakarta, Indonesia. A Bachelor of Information Systems student at AMIKOM University Yogyakarta. I specialize in modern web applications and cross-platform mobile experiences — fast, reliable, and built with care.
             </p>
             <p className="mb-4">
-              Whether architecting a scalable API, crafting a smooth React UI, or shipping a Flutter app to the App Store — I bring the same obsession with quality to everything I build. Saya percaya perubahan besar dimulai dari tindakan kecil.
+              Whether architecting a scalable API, crafting a smooth React UI, or shipping a Flutter app to the App Store — I bring the same obsession with quality to everything I build. I believe that big changes start with small actions.
             </p>
           </div>
           
@@ -67,7 +67,7 @@ export default function About() {
             <div className="h-[1px] bg-border-subtle" />
             <div className="flex flex-col gap-1">
               <span className="text-[12px] font-medium text-text-muted">Education</span>
-              <span className="text-[15px] text-text-secondary">S1 Sistem Informasi · Universitas AMIKOM</span>
+              <span className="text-[15px] text-text-secondary">Bachelor of Information Systems · AMIKOM University</span>
             </div>
             <div className="h-[1px] bg-border-subtle" />
             <div className="flex flex-col gap-1">
